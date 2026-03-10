@@ -98,7 +98,7 @@ def main():
         print("Error: Los parámetros deben ser números enteros.")
         sys.exit(1)
 
-    print("Algoritmo Extendido de Euclides")
+    #print("Algoritmo Extendido de Euclides")
 
     # Caso especial: módulo 0 no existe
     if b == 0:
@@ -108,14 +108,15 @@ def main():
 
     g, x, y = egcd_force_a_gt_b(a, b)
 
-    print("\nResultado:")
-    print(f"gcd({a}, {b}) = {g}")
+    #print("\nResultado:")
+    #print(f"gcd({a}, {b}) = {g}")
 
     if g == 1:
         m = abs(b)  # módulo positivo
         inv = x % m  # x es el inverso de a (mod b) cuando gcd=1
-        print("\nEl inverso multiplicativo modular:")
-        print(f"{a}^(-1) mod {m} = {inv}")
+        #print("\nEl inverso multiplicativo modular:")
+        #print(f"{a}^(-1) mod {m} = {inv}")
+        print(inv)
     else:
         imprimir_tabla_eea(a, b)
         print("\nNo hay inverso multiplicativo modular.")

@@ -20,7 +20,7 @@ jobs:
         test-name: inverso_1
         setup-command: ''
         command: "./aee.sh "
-        input: '3,26'
+        input: 3 26
         expected-output: '9'
         comparison-method: exact
         timeout: 10

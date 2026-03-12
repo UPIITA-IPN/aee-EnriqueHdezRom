@@ -2,13 +2,19 @@
 
 # Script para ejecutar el algoritmo extendido de Euclides (aee.py)
 
+# Si no hay argumentos, leemos desde la entrada estándar (stdin)
+if [ $# -eq 0 ]; then
+    input=$(cat)
+    set -- $input
+fi
+
 # Verificar si Python está instalado
 if ! command -v python3 &> /dev/null; then
     echo "Error: Python 3 no está instalado."
     exit 1
 fi
 
-# Verificar que se pasen exactamente 2 argumentos
+# Verificar que se tengan exactamente 2 argumentos
 if [ $# -ne 2 ]; then
     echo "Uso incorrecto."
     echo "Ejemplo de uso: ./aee.sh a b"
